@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,20 +10,11 @@ using System.Windows.Forms;
 
 namespace beadando
 {
-    public partial class Form1 : Form
+    public partial class Kezdo_uc : UserControl
     {
-        public Form1()
+        public Kezdo_uc()
         {
             InitializeComponent();
-        }
-
-       
-
-        private void newgame_Click(object sender, EventArgs e)
-        {
-            Form Jatekform = new Jatekform();
-
-            Jatekform.Show();
         }
     }
 }

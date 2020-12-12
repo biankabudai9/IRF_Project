@@ -10,20 +10,20 @@ using System.Windows.Forms;
 
 namespace beadando
 {
-    public partial class Form1 : Form
+    public partial class Jatekform : Form
     {
-        public Form1()
-        {
-            InitializeComponent();
-        }
-
        
 
-        private void newgame_Click(object sender, EventArgs e)
+        public Jatekform()
         {
-            Form Jatekform = new Jatekform();
+            InitializeComponent();
 
-            Jatekform.Show();
+            Kezdo_uc Kezdo_uc = new Kezdo_uc();
+            panel.Controls.Add(Kezdo_uc);
+            Kezdo_uc.Dock = DockStyle.Fill;
+
         }
+
+        
     }
 }
