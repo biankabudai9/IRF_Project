@@ -1,6 +1,6 @@
 ﻿namespace beadando
 {
-    partial class Jatekform
+    partial class Game_form
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Jatekform));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game_form));
             this.panel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
@@ -40,17 +40,16 @@
             this.panel.Size = new System.Drawing.Size(1168, 601);
             this.panel.TabIndex = 0;
             // 
-            // Jatekform
+            // Game_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1168, 601);
             this.Controls.Add(this.panel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Jatekform";
-            this.Text = "Új játék";
+            this.Name = "Game_form";
+            this.Text = "New game";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-           
             this.ResumeLayout(false);
 
         }

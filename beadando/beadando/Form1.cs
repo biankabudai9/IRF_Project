@@ -15,15 +15,17 @@ namespace beadando
         public Form1()
         {
             InitializeComponent();
+
+
         }
 
        
 
         private void newgame_Click(object sender, EventArgs e)
         {
-            Form Jatekform = new Jatekform();
+            Form Game_form = new Game_form();
 
-            Jatekform.Show();
+            Game_form.Show();
         }
     }
 }

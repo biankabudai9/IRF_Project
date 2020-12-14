@@ -70,34 +70,64 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChosenColor.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Jatekform.cs">
+    <Compile Include="Game_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Jatekform.Designer.cs">
-      <DependentUpon>Jatekform.cs</DependentUpon>
+    <Compile Include="Game_form.Designer.cs">
+      <DependentUpon>Game_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Kezdo_uc.cs">
+    <Compile Include="Hint_button.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Mybutton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mylabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Player.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Start_uc.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Kezdo_uc.Designer.cs">
-      <DependentUpon>Kezdo_uc.cs</DependentUpon>
+    <Compile Include="Start_uc.Designer.cs">
+      <DependentUpon>Start_uc.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Jatekform.resx">
-      <DependentUpon>Jatekform.cs</DependentUpon>
+    <EmbeddedResource Include="Game_form.resx">
+      <DependentUpon>Game_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Kezdo_uc.resx">
-      <DependentUpon>Kezdo_uc.cs</DependentUpon>
+    <EmbeddedResource Include="Start_uc.resx">
+      <DependentUpon>Start_uc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -108,6 +138,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EntityDeploy Include="Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -136,6 +173,18 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
