@@ -1,6 +1,6 @@
 ﻿namespace beadando
 {
-    partial class Game_form
+    partial class Results_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game_form));
-            this.panel = new System.Windows.Forms.Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Results_Form));
             this.SuspendLayout();
             // 
-            // panel
-            // 
-            this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel.Location = new System.Drawing.Point(0, 0);
-            this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(1168, 601);
-            this.panel.TabIndex = 0;
-            // 
-            // Game_form
+            // Results_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1168, 601);
-            this.Controls.Add(this.panel);
+            this.ClientSize = new System.Drawing.Size(882, 553);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Game_form";
-            this.Text = "Go";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Name = "Results_Form";
+            this.Text = "Results";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel;
     }
 }

@@ -73,11 +73,23 @@
     <Compile Include="ChosenColor.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Register_uc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Register_uc.Designer.cs">
+      <DependentUpon>Register_uc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Results_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Results_Form.Designer.cs">
+      <DependentUpon>Results_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Welcome_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Welcome_Form.Designer.cs">
+      <DependentUpon>Welcome_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Game_form.cs">
       <SubType>Form</SubType>
@@ -106,8 +118,11 @@
     <Compile Include="Mybutton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Mylabel.cs">
-      <SubType>Component</SubType>
+    <Compile Include="NewGame_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewGame_Form.Designer.cs">
+      <DependentUpon>NewGame_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Player.cs">
       <DependentUpon>Model.tt</DependentUpon>
@@ -120,8 +135,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="NewGame_Form.resx">
+      <DependentUpon>NewGame_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register_uc.resx">
+      <DependentUpon>Register_uc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Results_Form.resx">
+      <DependentUpon>Results_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Welcome_Form.resx">
+      <DependentUpon>Welcome_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Game_form.resx">
       <DependentUpon>Game_form.cs</DependentUpon>

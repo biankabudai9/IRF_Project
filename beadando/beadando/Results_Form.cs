@@ -10,22 +10,11 @@ using System.Windows.Forms;
 
 namespace beadando
 {
-    public partial class Form1 : Form
+    public partial class Results_Form : Form
     {
-        public Form1()
+        public Results_Form()
         {
             InitializeComponent();
-
-
-        }
-
-       
-
-        private void newgame_Click(object sender, EventArgs e)
-        {
-            Form Game_form = new Game_form();
-
-            Game_form.Show();
         }
     }
 }

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,13 +10,11 @@ using System.Windows.Forms;
 
 namespace beadando
 {
-    class Mylabel : Label
+    public partial class Register_uc : UserControl
     {
-        Mylabel()
+        public Register_uc()
         {
-            Font = new Font("Century Gothic", 12, FontStyle.Bold);
-            ForeColor = Color.Black;
-
+            InitializeComponent();
         }
     }
 }
