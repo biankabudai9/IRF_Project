@@ -152,7 +152,7 @@ namespace beadando
 
         private void hint_button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Add a password that contains both letters and numbers and is at least 8 characters.");
+            MessageBox.Show("Add a password that contains both letters and numbers and is at least 8 characters. Confirm it in the next field.");
         }
     }
 

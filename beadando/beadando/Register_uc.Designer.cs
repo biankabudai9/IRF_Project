@@ -94,12 +94,11 @@
             this.wrongpw.BackColor = System.Drawing.Color.Transparent;
             this.wrongpw.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.wrongpw.ForeColor = System.Drawing.Color.Red;
-            this.wrongpw.Location = new System.Drawing.Point(559, 317);
+            this.wrongpw.Location = new System.Drawing.Point(566, 300);
             this.wrongpw.Name = "wrongpw";
-            this.wrongpw.Size = new System.Drawing.Size(307, 69);
+            this.wrongpw.Size = new System.Drawing.Size(264, 92);
             this.wrongpw.TabIndex = 12;
-            this.wrongpw.Text = "Your password must be \r\nat least 8 characters long \r\nhaving both numbers and lett" +
-    "ers";
+            this.wrongpw.Text = "Password must be at least \r\n8 characters long\r\nand the fields should match\r\n\r\n";
             this.wrongpw.Visible = false;
             // 
             // cancel
