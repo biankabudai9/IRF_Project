@@ -42,6 +42,9 @@
             this.pwagain = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.hint_button1 = new beadando.Hint_button();
+            this.hint_button2 = new beadando.Hint_button();
+            this.hint_button3 = new beadando.Hint_button();
             this.SuspendLayout();
             // 
             // addplayer
@@ -65,7 +68,7 @@
             this.wrongname.BackColor = System.Drawing.Color.Transparent;
             this.wrongname.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.wrongname.ForeColor = System.Drawing.Color.Red;
-            this.wrongname.Location = new System.Drawing.Point(530, 166);
+            this.wrongname.Location = new System.Drawing.Point(551, 170);
             this.wrongname.Name = "wrongname";
             this.wrongname.Size = new System.Drawing.Size(271, 23);
             this.wrongname.TabIndex = 10;
@@ -78,7 +81,7 @@
             this.wrongage.BackColor = System.Drawing.Color.Transparent;
             this.wrongage.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.wrongage.ForeColor = System.Drawing.Color.Red;
-            this.wrongage.Location = new System.Drawing.Point(530, 235);
+            this.wrongage.Location = new System.Drawing.Point(551, 239);
             this.wrongage.Name = "wrongage";
             this.wrongage.Size = new System.Drawing.Size(315, 23);
             this.wrongage.TabIndex = 11;
@@ -91,7 +94,7 @@
             this.wrongpw.BackColor = System.Drawing.Color.Transparent;
             this.wrongpw.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.wrongpw.ForeColor = System.Drawing.Color.Red;
-            this.wrongpw.Location = new System.Drawing.Point(538, 313);
+            this.wrongpw.Location = new System.Drawing.Point(559, 317);
             this.wrongpw.Name = "wrongpw";
             this.wrongpw.Size = new System.Drawing.Size(307, 69);
             this.wrongpw.TabIndex = 12;
@@ -130,7 +133,7 @@
             // 
             this.newname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
             this.newname.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.newname.Location = new System.Drawing.Point(292, 159);
+            this.newname.Location = new System.Drawing.Point(309, 159);
             this.newname.MaxLength = 30;
             this.newname.Name = "newname";
             this.newname.Size = new System.Drawing.Size(200, 36);
@@ -142,7 +145,7 @@
             // 
             this.newage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
             this.newage.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.newage.Location = new System.Drawing.Point(292, 226);
+            this.newage.Location = new System.Drawing.Point(309, 226);
             this.newage.MaxLength = 2;
             this.newage.Name = "newage";
             this.newage.Size = new System.Drawing.Size(200, 36);
@@ -178,7 +181,7 @@
             // 
             this.pw.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
             this.pw.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.pw.Location = new System.Drawing.Point(292, 293);
+            this.pw.Location = new System.Drawing.Point(309, 293);
             this.pw.MaxLength = 20;
             this.pw.Name = "pw";
             this.pw.PasswordChar = '•';
@@ -191,7 +194,7 @@
             // 
             this.pwagain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
             this.pwagain.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.pwagain.Location = new System.Drawing.Point(292, 362);
+            this.pwagain.Location = new System.Drawing.Point(309, 362);
             this.pwagain.MaxLength = 20;
             this.pwagain.Name = "pwagain";
             this.pwagain.PasswordChar = '•';
@@ -224,10 +227,55 @@
             this.label4.TabIndex = 37;
             this.label4.Text = "Confirm password";
             // 
+            // hint_button1
+            // 
+            this.hint_button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(155)))), ((int)(((byte)(150)))));
+            this.hint_button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.hint_button1.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
+            this.hint_button1.ForeColor = System.Drawing.Color.White;
+            this.hint_button1.Location = new System.Drawing.Point(86, 157);
+            this.hint_button1.Name = "hint_button1";
+            this.hint_button1.Size = new System.Drawing.Size(35, 35);
+            this.hint_button1.TabIndex = 38;
+            this.hint_button1.Text = "?";
+            this.hint_button1.UseVisualStyleBackColor = false;
+            this.hint_button1.Click += new System.EventHandler(this.hint_button1_Click);
+            // 
+            // hint_button2
+            // 
+            this.hint_button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(155)))), ((int)(((byte)(150)))));
+            this.hint_button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.hint_button2.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
+            this.hint_button2.ForeColor = System.Drawing.Color.White;
+            this.hint_button2.Location = new System.Drawing.Point(165, 225);
+            this.hint_button2.Name = "hint_button2";
+            this.hint_button2.Size = new System.Drawing.Size(35, 35);
+            this.hint_button2.TabIndex = 39;
+            this.hint_button2.Text = "?";
+            this.hint_button2.UseVisualStyleBackColor = false;
+            this.hint_button2.Click += new System.EventHandler(this.hint_button2_Click);
+            // 
+            // hint_button3
+            // 
+            this.hint_button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(155)))), ((int)(((byte)(150)))));
+            this.hint_button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.hint_button3.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
+            this.hint_button3.ForeColor = System.Drawing.Color.White;
+            this.hint_button3.Location = new System.Drawing.Point(97, 294);
+            this.hint_button3.Name = "hint_button3";
+            this.hint_button3.Size = new System.Drawing.Size(35, 35);
+            this.hint_button3.TabIndex = 40;
+            this.hint_button3.Text = "?";
+            this.hint_button3.UseVisualStyleBackColor = false;
+            this.hint_button3.Click += new System.EventHandler(this.hint_button3_Click);
+            // 
             // Register_uc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.hint_button3);
+            this.Controls.Add(this.hint_button2);
+            this.Controls.Add(this.hint_button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pwagain);
@@ -266,5 +314,8 @@
         private System.Windows.Forms.TextBox pwagain;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private Hint_button hint_button1;
+        private Hint_button hint_button2;
+        private Hint_button hint_button3;
     }
 }

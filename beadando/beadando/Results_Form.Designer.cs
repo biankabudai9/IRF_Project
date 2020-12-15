@@ -34,8 +34,9 @@
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Results_Form));
             this.piechart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.diagramBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.download = new beadando.Mybutton();
+            this.diagramBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.piechart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diagramBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -49,7 +50,7 @@
             this.piechart.DataSource = this.diagramBindingSource;
             legend1.Name = "Legend1";
             this.piechart.Legends.Add(legend1);
-            this.piechart.Location = new System.Drawing.Point(36, 35);
+            this.piechart.Location = new System.Drawing.Point(12, 68);
             this.piechart.Name = "piechart";
             this.piechart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.piechart.PaletteCustomColors = new System.Drawing.Color[] {
@@ -76,13 +77,9 @@
             series1.XValueMember = "name";
             series1.YValueMembers = "score";
             this.piechart.Series.Add(series1);
-            this.piechart.Size = new System.Drawing.Size(601, 491);
+            this.piechart.Size = new System.Drawing.Size(583, 474);
             this.piechart.TabIndex = 1;
             this.piechart.Text = "chart1";
-            // 
-            // diagramBindingSource
-            // 
-            this.diagramBindingSource.DataSource = typeof(beadando.diagram);
             // 
             // download
             // 
@@ -90,19 +87,36 @@
             this.download.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.download.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
             this.download.ForeColor = System.Drawing.Color.White;
-            this.download.Location = new System.Drawing.Point(625, 363);
+            this.download.Location = new System.Drawing.Point(584, 365);
             this.download.Name = "download";
-            this.download.Size = new System.Drawing.Size(256, 84);
+            this.download.Size = new System.Drawing.Size(294, 84);
             this.download.TabIndex = 2;
-            this.download.Text = "Download results";
+            this.download.Text = "Download all results";
             this.download.UseVisualStyleBackColor = false;
             this.download.Click += new System.EventHandler(this.download_Click);
+            // 
+            // diagramBindingSource
+            // 
+            this.diagramBindingSource.DataSource = typeof(beadando.diagram);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(404, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(191, 34);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "Top 5 Players";
             // 
             // Results_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 603);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.download);
             this.Controls.Add(this.piechart);
             this.DoubleBuffered = true;
@@ -112,6 +126,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.piechart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.diagramBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -120,5 +135,6 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart piechart;
         private System.Windows.Forms.BindingSource diagramBindingSource;
         private Mybutton download;
+        private System.Windows.Forms.Label label2;
     }
 }

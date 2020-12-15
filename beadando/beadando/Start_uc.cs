@@ -42,17 +42,17 @@ namespace beadando
 
         private void Go_IsEnabled()
         {
-            if (name1.Text != "" && name2.Text != "" && pw1.Text != "" && pw2.Text != "" && color1.Text != "" && color2.Text != "" && incorrect_message.Visible == false)
-            {
+            //if (name1.Text != "" && name2.Text != "" && pw1.Text != "" && pw2.Text != "" && color1.Text != "" && color2.Text != "" && incorrect_message.Visible == false)
+            //{
 
                 Go.Enabled = true;
 
-            }
-            else
-            {
-                Go.Enabled = false;
+            //}
+            //else
+            //{
+            //    Go.Enabled = false;
 
-            }
+            //}
         }
 
         private void Register_Click(object sender, EventArgs e)
@@ -70,25 +70,26 @@ namespace beadando
         private void name1_TextChanged(object sender, EventArgs e)
         {
             Go_IsEnabled();
-            IsItCorrect();
+            
         }
 
         private void name2_TextChanged(object sender, EventArgs e)
         {
             Go_IsEnabled();
-            IsItCorrect();
+           
         }
 
         private void pw1_TextChanged(object sender, EventArgs e)
         {
             Go_IsEnabled();
-            IsItCorrect();
+            
         }
 
         private void pw2_TextChanged(object sender, EventArgs e)
         {
             Go_IsEnabled();
-            IsItCorrect();
+
+           
         }
 
         private void IsItCorrect()
@@ -146,7 +147,8 @@ namespace beadando
         }
         private void Go_Click(object sender, EventArgs e)
         {
-            
+
+            IsItCorrect();
 
             if (incorrect_message.Visible == false)           
             {
@@ -155,6 +157,10 @@ namespace beadando
                 Form NewGame_Form = new NewGame_Form();
                 NewGame_Form.Show();
 
+            }
+            else
+            {
+                Go.Enabled = false;
             }
 
 

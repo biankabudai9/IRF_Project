@@ -74,7 +74,6 @@
     <Compile Include="ChosenColor.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Mypen.cs" />
     <Compile Include="Register_uc.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -87,6 +86,7 @@
     <Compile Include="Results_Form.Designer.cs">
       <DependentUpon>Results_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="SavedPlayer.cs" />
     <Compile Include="Welcome_Form.cs">
       <SubType>Form</SubType>
     </Compile>

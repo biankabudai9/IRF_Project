@@ -37,7 +37,8 @@ namespace beadando
             Regex r = new Regex(@"^(?!\s*$).{1}");
             if (r.IsMatch(newname.Text))
             {
-               
+                newname.BackColor = Color.FromArgb(255, 216, 242, 246);
+
                 addplayer.Enabled = true;
             }
             else
@@ -57,6 +58,7 @@ namespace beadando
             }
             else
             {
+                newname.BackColor = Color.FromArgb(255, 216, 242, 246);
                 addplayer.Enabled = true;
                 wrongname.Visible = false;
             }
@@ -69,10 +71,10 @@ namespace beadando
 
         private void newage_Validating(object sender, CancelEventArgs e)
         {
-            Regex r = new Regex(@"^[0-9]{2}$");
-            if (r.IsMatch(newage.Text))
+            if (newage.Text == "") return;
+            if (Convert.ToInt32(newage.Text) >= 6 && Convert.ToInt32(newage.Text) < 100)
             {
-
+                newage.BackColor = Color.FromArgb(255, 216, 242, 246);
                 addplayer.Enabled = true;
                 wrongage.Visible = false;
             }
@@ -96,7 +98,7 @@ namespace beadando
             Regex r = new Regex(@"^(?!\s*$).{8}");
             if (r.IsMatch(pw.Text))
             {
-                
+                pw.BackColor = Color.FromArgb(255, 216, 242, 246);
                 addplayer.Enabled = true;
                 wrongpw.Visible = false;
             }
@@ -119,7 +121,7 @@ namespace beadando
             string r = pw.Text;
             if (r == pwagain.Text)
             {
-                
+                pwagain.BackColor = Color.FromArgb(255, 216, 242, 246);
                 addplayer.Enabled = true;
                 wrongpw.Visible = false;
             }
@@ -136,6 +138,21 @@ namespace beadando
         private void pwagain_TextChanged(object sender, EventArgs e)
         {
             this.Validate();
+        }
+
+        private void hint_button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Choose a unique username that is not used by anyone yet.");
+        }
+
+        private void hint_button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Please provide your age to help improve our statistics.");
+        }
+
+        private void hint_button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Add a password that contains both letters and numbers and is at least 8 characters.");
         }
     }
 

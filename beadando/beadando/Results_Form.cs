@@ -17,22 +17,24 @@ namespace beadando
     {
 
         databaseEntities context = new databaseEntities();
+        List<SavedPlayer> _savedPlayers = new List<SavedPlayer>();
 
-
-        public Results_Form()
+        public Results_Form(List<SavedPlayer> savedPlayers)
         {
             InitializeComponent();
-
-            chartfill();
+            _savedPlayers = savedPlayers;
+            chartfill(savedPlayers);
         }
 
-        private void chartfill()
+        private void chartfill(List<SavedPlayer> savedPlayers)
         {
-            var r = from y in context.Players
+            var r = from y in savedPlayers
                     select new { y.name, y.score };
+            var r2 = (from z in r
+                      orderby z.score descending
+                      select z).Take(5);
 
-
-            var results = from x in r
+            var results = from x in r2
                           select new diagram
                           {
                               name = x.name,
@@ -44,12 +46,13 @@ namespace beadando
             piechart.DataBind();
 
 
+
         }
 
         private void download_Click(object sender, EventArgs e)
         {
-            var details = from x in context.Players
-                       select x;
+            var details = from x in _savedPlayers
+                          select x;
 
 
             SaveFileDialog save = new SaveFileDialog();
@@ -57,11 +60,20 @@ namespace beadando
             if (save.ShowDialog() != DialogResult.OK) return;
             using (StreamWriter sw = new StreamWriter(save.FileName, false, Encoding.UTF8))
             {
+                sw.Write("name");
+                sw.Write(";");
+                sw.Write("score");
+                sw.Write(";");
+                sw.Write("agegroup");
+                sw.Write(";");
+                sw.WriteLine();
                 foreach (var d in details)
                 {
                     sw.Write(d.name);
                     sw.Write(";");
-                    sw.Write(d.score);
+                    sw.Write(d.score.ToString());
+                    sw.Write(";");
+                    sw.Write(d.AgeGroup);
                     sw.Write(";");
                     sw.WriteLine();
                 }
