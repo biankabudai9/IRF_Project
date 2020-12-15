@@ -28,12 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Go = new beadando.Mybutton();
             this.Register = new System.Windows.Forms.Button();
             this.color1 = new System.Windows.Forms.ComboBox();
             this.color2 = new System.Windows.Forms.ComboBox();
             this.incorrect_message = new System.Windows.Forms.Label();
-            this.cancel = new beadando.Mybutton();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,24 +45,14 @@
             this.name2 = new System.Windows.Forms.TextBox();
             this.pw2 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.cancel = new beadando.Mybutton();
+            this.Go = new beadando.Mybutton();
             this.SuspendLayout();
-            // 
-            // Go
-            // 
-            this.Go.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(82)))));
-            this.Go.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Go.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
-            this.Go.ForeColor = System.Drawing.Color.White;
-            this.Go.Location = new System.Drawing.Point(350, 393);
-            this.Go.Name = "Go";
-            this.Go.Size = new System.Drawing.Size(167, 69);
-            this.Go.TabIndex = 11;
-            this.Go.Text = "Go";
-            this.Go.UseVisualStyleBackColor = false;
             // 
             // Register
             // 
             this.Register.BackColor = System.Drawing.Color.Cyan;
+            this.Register.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Register.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Register.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
             this.Register.ForeColor = System.Drawing.Color.Black;
@@ -82,7 +70,7 @@
             this.color1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
             this.color1.ForeColor = System.Drawing.Color.Black;
             this.color1.FormattingEnabled = true;
-            this.color1.Location = new System.Drawing.Point(164, 245);
+            this.color1.Location = new System.Drawing.Point(188, 244);
             this.color1.Name = "color1";
             this.color1.Size = new System.Drawing.Size(200, 35);
             this.color1.TabIndex = 15;
@@ -93,7 +81,7 @@
             this.color2.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
             this.color2.ForeColor = System.Drawing.Color.Black;
             this.color2.FormattingEnabled = true;
-            this.color2.Location = new System.Drawing.Point(642, 245);
+            this.color2.Location = new System.Drawing.Point(666, 245);
             this.color2.Name = "color2";
             this.color2.Size = new System.Drawing.Size(200, 35);
             this.color2.TabIndex = 16;
@@ -111,26 +99,13 @@
             this.incorrect_message.Text = "Incorrect username or password!";
             this.incorrect_message.Visible = false;
             // 
-            // cancel
-            // 
-            this.cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(82)))));
-            this.cancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cancel.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
-            this.cancel.ForeColor = System.Drawing.Color.White;
-            this.cancel.Location = new System.Drawing.Point(58, 529);
-            this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(177, 54);
-            this.cancel.TabIndex = 18;
-            this.cancel.Text = "Cancel";
-            this.cancel.UseVisualStyleBackColor = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(27, 29);
+            this.label2.Location = new System.Drawing.Point(51, 28);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(123, 34);
             this.label2.TabIndex = 20;
@@ -142,7 +117,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(513, 29);
+            this.label3.Location = new System.Drawing.Point(537, 29);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(123, 34);
             this.label3.TabIndex = 21;
@@ -154,11 +129,11 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(52, 100);
+            this.label1.Location = new System.Drawing.Point(23, 101);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 34);
+            this.label1.Size = new System.Drawing.Size(151, 34);
             this.label1.TabIndex = 22;
-            this.label1.Text = "Name";
+            this.label1.Text = "Username";
             // 
             // label4
             // 
@@ -166,11 +141,11 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(529, 100);
+            this.label4.Location = new System.Drawing.Point(500, 99);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 34);
+            this.label4.Size = new System.Drawing.Size(151, 34);
             this.label4.TabIndex = 23;
-            this.label4.Text = "Name";
+            this.label4.Text = "Username";
             // 
             // label5
             // 
@@ -178,7 +153,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(61, 246);
+            this.label5.Location = new System.Drawing.Point(85, 245);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 34);
             this.label5.TabIndex = 24;
@@ -190,7 +165,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(538, 244);
+            this.label6.Location = new System.Drawing.Point(562, 244);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(89, 34);
             this.label6.TabIndex = 25;
@@ -202,7 +177,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(10, 166);
+            this.label7.Location = new System.Drawing.Point(34, 165);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(140, 34);
             this.label7.TabIndex = 26;
@@ -214,7 +189,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(487, 166);
+            this.label8.Location = new System.Drawing.Point(511, 166);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(140, 34);
             this.label8.TabIndex = 27;
@@ -224,43 +199,47 @@
             // 
             this.pw1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
             this.pw1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.pw1.Location = new System.Drawing.Point(164, 167);
+            this.pw1.Location = new System.Drawing.Point(188, 166);
             this.pw1.MaxLength = 20;
             this.pw1.Name = "pw1";
             this.pw1.PasswordChar = '•';
             this.pw1.Size = new System.Drawing.Size(200, 36);
             this.pw1.TabIndex = 28;
+            this.pw1.TextChanged += new System.EventHandler(this.pw1_TextChanged);
             // 
             // name1
             // 
             this.name1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
             this.name1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.name1.Location = new System.Drawing.Point(164, 100);
+            this.name1.Location = new System.Drawing.Point(188, 99);
             this.name1.MaxLength = 30;
             this.name1.Name = "name1";
             this.name1.Size = new System.Drawing.Size(200, 36);
             this.name1.TabIndex = 29;
+            this.name1.TextChanged += new System.EventHandler(this.name1_TextChanged);
             // 
             // name2
             // 
             this.name2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
             this.name2.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.name2.Location = new System.Drawing.Point(642, 100);
+            this.name2.Location = new System.Drawing.Point(666, 100);
             this.name2.MaxLength = 30;
             this.name2.Name = "name2";
             this.name2.Size = new System.Drawing.Size(200, 36);
             this.name2.TabIndex = 30;
+            this.name2.TextChanged += new System.EventHandler(this.name2_TextChanged);
             // 
             // pw2
             // 
             this.pw2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
             this.pw2.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.pw2.Location = new System.Drawing.Point(642, 167);
+            this.pw2.Location = new System.Drawing.Point(666, 167);
             this.pw2.MaxLength = 20;
             this.pw2.Name = "pw2";
             this.pw2.PasswordChar = '•';
             this.pw2.Size = new System.Drawing.Size(200, 36);
             this.pw2.TabIndex = 31;
+            this.pw2.TextChanged += new System.EventHandler(this.pw2_TextChanged);
             // 
             // label9
             // 
@@ -273,6 +252,36 @@
             this.label9.Size = new System.Drawing.Size(217, 34);
             this.label9.TabIndex = 32;
             this.label9.Text = "First time here?";
+            // 
+            // cancel
+            // 
+            this.cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(82)))));
+            this.cancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cancel.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
+            this.cancel.ForeColor = System.Drawing.Color.White;
+            this.cancel.Location = new System.Drawing.Point(58, 529);
+            this.cancel.Name = "cancel";
+            this.cancel.Size = new System.Drawing.Size(177, 54);
+            this.cancel.TabIndex = 18;
+            this.cancel.Text = "Cancel";
+            this.cancel.UseVisualStyleBackColor = false;
+            // 
+            // Go
+            // 
+            this.Go.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(82)))));
+            this.Go.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Go.Enabled = false;
+            this.Go.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Go.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
+            this.Go.ForeColor = System.Drawing.Color.White;
+            this.Go.Location = new System.Drawing.Point(350, 393);
+            this.Go.Name = "Go";
+            this.Go.Size = new System.Drawing.Size(167, 69);
+            this.Go.TabIndex = 11;
+            this.Go.Text = "Go";
+            this.Go.UseVisualStyleBackColor = false;
+            this.Go.Click += new System.EventHandler(this.Go_Click);
             // 
             // Start_uc
             // 

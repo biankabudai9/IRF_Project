@@ -16,5 +16,21 @@ namespace beadando
         {
             InitializeComponent();
         }
+
+        private void cancel_Click(object sender, EventArgs e)
+        {
+            Controls.Clear();
+            Start_uc startuc = new Start_uc();
+            Controls.Add(startuc);
+            startuc.Dock = DockStyle.Fill;
+
+        }
+
+        private void newname_Validating(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        
     }
 }

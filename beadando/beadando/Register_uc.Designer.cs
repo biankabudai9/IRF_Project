@@ -47,6 +47,7 @@
             // addplayer
             // 
             this.addplayer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(82)))));
+            this.addplayer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addplayer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addplayer.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
             this.addplayer.ForeColor = System.Drawing.Color.White;
@@ -65,9 +66,9 @@
             this.wrongname.ForeColor = System.Drawing.Color.Red;
             this.wrongname.Location = new System.Drawing.Point(530, 166);
             this.wrongname.Name = "wrongname";
-            this.wrongname.Size = new System.Drawing.Size(345, 23);
+            this.wrongname.Size = new System.Drawing.Size(271, 23);
             this.wrongname.TabIndex = 10;
-            this.wrongname.Text = "This name should only contain letters";
+            this.wrongname.Text = "This username already exists";
             this.wrongname.Visible = false;
             // 
             // wrongage
@@ -89,7 +90,7 @@
             this.wrongpw.BackColor = System.Drawing.Color.Transparent;
             this.wrongpw.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.wrongpw.ForeColor = System.Drawing.Color.Red;
-            this.wrongpw.Location = new System.Drawing.Point(538, 325);
+            this.wrongpw.Location = new System.Drawing.Point(538, 313);
             this.wrongpw.Name = "wrongpw";
             this.wrongpw.Size = new System.Drawing.Size(307, 69);
             this.wrongpw.TabIndex = 12;
@@ -100,6 +101,7 @@
             // cancel
             // 
             this.cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(82)))));
+            this.cancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cancel.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
             this.cancel.ForeColor = System.Drawing.Color.White;
@@ -109,6 +111,7 @@
             this.cancel.TabIndex = 13;
             this.cancel.Text = "Cancel";
             this.cancel.UseVisualStyleBackColor = false;
+            this.cancel.Click += new System.EventHandler(this.cancel_Click);
             // 
             // label1
             // 
@@ -131,6 +134,7 @@
             this.newname.Name = "newname";
             this.newname.Size = new System.Drawing.Size(200, 36);
             this.newname.TabIndex = 33;
+            this.newname.Validating += new System.ComponentModel.CancelEventHandler(this.newname_Validating);
             // 
             // newage
             // 
@@ -160,11 +164,11 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(180, 159);
+            this.label2.Location = new System.Drawing.Point(127, 158);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 34);
+            this.label2.Size = new System.Drawing.Size(151, 34);
             this.label2.TabIndex = 30;
-            this.label2.Text = "Name";
+            this.label2.Text = "Username";
             // 
             // textBox1
             // 
