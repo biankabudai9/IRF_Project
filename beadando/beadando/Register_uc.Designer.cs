@@ -68,7 +68,7 @@
             this.wrongname.BackColor = System.Drawing.Color.Transparent;
             this.wrongname.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.wrongname.ForeColor = System.Drawing.Color.Red;
-            this.wrongname.Location = new System.Drawing.Point(551, 170);
+            this.wrongname.Location = new System.Drawing.Point(559, 169);
             this.wrongname.Name = "wrongname";
             this.wrongname.Size = new System.Drawing.Size(271, 23);
             this.wrongname.TabIndex = 10;
@@ -81,7 +81,7 @@
             this.wrongage.BackColor = System.Drawing.Color.Transparent;
             this.wrongage.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.wrongage.ForeColor = System.Drawing.Color.Red;
-            this.wrongage.Location = new System.Drawing.Point(551, 239);
+            this.wrongage.Location = new System.Drawing.Point(559, 237);
             this.wrongage.Name = "wrongage";
             this.wrongage.Size = new System.Drawing.Size(315, 23);
             this.wrongage.TabIndex = 11;

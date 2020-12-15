@@ -64,7 +64,7 @@ namespace beadando
                 sw.Write(";");
                 sw.Write("score");
                 sw.Write(";");
-                sw.Write("agegroup");
+                sw.Write("age");
                 sw.Write(";");
                 sw.WriteLine();
                 foreach (var d in details)
