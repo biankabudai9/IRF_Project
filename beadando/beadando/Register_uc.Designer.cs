@@ -38,8 +38,8 @@
             this.newage = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.pw = new System.Windows.Forms.TextBox();
+            this.pwagain = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -48,6 +48,7 @@
             // 
             this.addplayer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(82)))));
             this.addplayer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addplayer.Enabled = false;
             this.addplayer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addplayer.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
             this.addplayer.ForeColor = System.Drawing.Color.White;
@@ -134,6 +135,7 @@
             this.newname.Name = "newname";
             this.newname.Size = new System.Drawing.Size(200, 36);
             this.newname.TabIndex = 33;
+            this.newname.TextChanged += new System.EventHandler(this.newname_TextChanged);
             this.newname.Validating += new System.ComponentModel.CancelEventHandler(this.newname_Validating);
             // 
             // newage
@@ -145,6 +147,8 @@
             this.newage.Name = "newage";
             this.newage.Size = new System.Drawing.Size(200, 36);
             this.newage.TabIndex = 32;
+            this.newage.TextChanged += new System.EventHandler(this.newage_TextChanged);
+            this.newage.Validating += new System.ComponentModel.CancelEventHandler(this.newage_Validating);
             // 
             // label7
             // 
@@ -170,27 +174,31 @@
             this.label2.TabIndex = 30;
             this.label2.Text = "Username";
             // 
-            // textBox1
+            // pw
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.textBox1.Location = new System.Drawing.Point(292, 293);
-            this.textBox1.MaxLength = 20;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '•';
-            this.textBox1.Size = new System.Drawing.Size(200, 36);
-            this.textBox1.TabIndex = 34;
+            this.pw.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
+            this.pw.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
+            this.pw.Location = new System.Drawing.Point(292, 293);
+            this.pw.MaxLength = 20;
+            this.pw.Name = "pw";
+            this.pw.PasswordChar = '•';
+            this.pw.Size = new System.Drawing.Size(200, 36);
+            this.pw.TabIndex = 34;
+            this.pw.TextChanged += new System.EventHandler(this.pw_TextChanged);
+            this.pw.Validating += new System.ComponentModel.CancelEventHandler(this.pw_Validating);
             // 
-            // textBox2
+            // pwagain
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.textBox2.Location = new System.Drawing.Point(292, 362);
-            this.textBox2.MaxLength = 20;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '•';
-            this.textBox2.Size = new System.Drawing.Size(200, 36);
-            this.textBox2.TabIndex = 35;
+            this.pwagain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
+            this.pwagain.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
+            this.pwagain.Location = new System.Drawing.Point(292, 362);
+            this.pwagain.MaxLength = 20;
+            this.pwagain.Name = "pwagain";
+            this.pwagain.PasswordChar = '•';
+            this.pwagain.Size = new System.Drawing.Size(200, 36);
+            this.pwagain.TabIndex = 35;
+            this.pwagain.TextChanged += new System.EventHandler(this.pwagain_TextChanged);
+            this.pwagain.Validating += new System.ComponentModel.CancelEventHandler(this.pwagain_Validating);
             // 
             // label3
             // 
@@ -222,8 +230,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.pwagain);
+            this.Controls.Add(this.pw);
             this.Controls.Add(this.newname);
             this.Controls.Add(this.newage);
             this.Controls.Add(this.label7);
@@ -254,8 +262,8 @@
         private System.Windows.Forms.TextBox newage;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox pw;
+        private System.Windows.Forms.TextBox pwagain;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
     }
