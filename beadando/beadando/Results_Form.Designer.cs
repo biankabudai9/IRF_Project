@@ -34,9 +34,9 @@
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Results_Form));
             this.piechart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.diagramBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.download = new beadando.Mybutton();
+            this.diagramBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.piechart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diagramBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -81,10 +81,6 @@
             this.piechart.TabIndex = 1;
             this.piechart.Text = "chart1";
             // 
-            // diagramBindingSource
-            // 
-            this.diagramBindingSource.DataSource = typeof(beadando.diagram);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -100,6 +96,7 @@
             // download
             // 
             this.download.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(82)))));
+            this.download.Cursor = System.Windows.Forms.Cursors.Hand;
             this.download.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.download.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
             this.download.ForeColor = System.Drawing.Color.White;
@@ -110,6 +107,10 @@
             this.download.Text = "Download all results";
             this.download.UseVisualStyleBackColor = false;
             this.download.Click += new System.EventHandler(this.download_Click);
+            // 
+            // diagramBindingSource
+            // 
+            this.diagramBindingSource.DataSource = typeof(beadando.diagram);
             // 
             // Results_Form
             // 

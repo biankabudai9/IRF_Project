@@ -74,6 +74,7 @@
             this.color1.Name = "color1";
             this.color1.Size = new System.Drawing.Size(200, 35);
             this.color1.TabIndex = 15;
+            this.color1.SelectedIndexChanged += new System.EventHandler(this.color1_SelectedIndexChanged);
             // 
             // color2
             // 
@@ -85,6 +86,7 @@
             this.color2.Name = "color2";
             this.color2.Size = new System.Drawing.Size(200, 35);
             this.color2.TabIndex = 16;
+            this.color2.SelectedIndexChanged += new System.EventHandler(this.color2_SelectedIndexChanged);
             // 
             // incorrect_message
             // 

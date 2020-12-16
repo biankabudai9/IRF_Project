@@ -213,6 +213,9 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <Content Include="startMaps\startmap1.bmp" />
+    <Content Include="startMaps\startmap2.bmp" />
+    <Content Include="startMaps\startmap3.bmp" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

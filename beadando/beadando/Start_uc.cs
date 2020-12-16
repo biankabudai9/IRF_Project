@@ -59,7 +59,7 @@ namespace beadando
         // Engedélyezzük a Go Gombot, ha minden adat ki van töltve
         private void Go_IsEnabled()
         {
-            if (name1.Text != "" && name2.Text != "" && pw1.Text != "" && pw2.Text != "" && color1.Text != "" && color2.Text != "" && incorrect_message.Visible == false)
+            if (name1.Text != "" && name2.Text != "" && pw1.Text != "" && pw2.Text != "" && color1.Text != "" && color2.Text != "" && color1.Text != color2.Text)
             {
 
                 Go.Enabled = true;
@@ -104,6 +104,7 @@ namespace beadando
         //Ha nem szerepel ilyen adat, akkor hibaüzenet jelenik meg
         private void IsItCorrect()
         {
+            //Első felhasználónév és jelszó
             var u = (from a in context.Players
                      where a.name == name1.Text
                      select a).FirstOrDefault();
@@ -129,7 +130,7 @@ namespace beadando
                 incorrect_message.Visible = true;
             }
 
-
+            //Második felhasználónév és jelszó
             var u2 = (from b in context.Players
                       where b.name == name2.Text
                       select b).FirstOrDefault();
@@ -154,10 +155,20 @@ namespace beadando
                 incorrect_message.Visible = true;
             }
 
+            //Egyforma színt nem választhatnak
+            if (color1.SelectedItem == color2.SelectedItem)
+            {
+                MessageBox.Show("Do not choose the same color");
+                incorrect_message.Visible = true;
+            }
+            else
+            {
+                incorrect_message.Visible = false;
+            }
         }
 
         // A Go gomb lenyomásakor megnézzük, kapunk-e hibaüzenetet az IsItCorrect függvényre
-        // ha nem, akkor betöltjük a játékosok adatait a játékhoz
+        // Ha nem, akkor betöltjük a játékosok adatait a játékhoz
         private void Go_Click(object sender, EventArgs e)
         {
 
@@ -179,18 +190,42 @@ namespace beadando
                 SavedPlayer secondplayer = new SavedPlayer();
                 secondplayer.name = second.name;
 
-                
+
+                // Szín tárolása az adatbázis R G B oszlopai alapján
+                var colorf = (from c in context.ChosenColors
+                              where c.color_name == color1.Text
+                              select c).FirstOrDefault();
+
+                Color colorFirst = Color.FromArgb(colorf.R, colorf.G, colorf.B);
+
+                var colors = (from c in context.ChosenColors
+                              where c.color_name == color2.Text
+                              select c).FirstOrDefault();
+
+                Color colorSecond = Color.FromArgb(colors.R, colors.G, colors.B);
+
+
+                // Játék Form indítása
                 Form Game_Form = new Game_Form(firstplayer, secondplayer, Color.FromArgb(255, 0, 0, 0), Color.FromArgb(140, 140, 20, 10));
                 Game_Form.Show();
             }
             else
             {
-                MessageBox.Show("Some details are incorrect");
+               
+                Go.Enabled = false; // Ha hibásak az adatok, nem lehet elindítani
             }
 
 
         }
 
+        private void color1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Go_IsEnabled();
+        }
 
+        private void color2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Go_IsEnabled();
+        }
     }
 }

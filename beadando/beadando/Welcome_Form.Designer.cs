@@ -37,10 +37,11 @@
             // results
             // 
             this.results.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(82)))));
+            this.results.Cursor = System.Windows.Forms.Cursors.Hand;
             this.results.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.results.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
             this.results.ForeColor = System.Drawing.Color.White;
-            this.results.Location = new System.Drawing.Point(778, 456);
+            this.results.Location = new System.Drawing.Point(769, 465);
             this.results.Name = "results";
             this.results.Size = new System.Drawing.Size(250, 80);
             this.results.TabIndex = 1;
@@ -51,10 +52,11 @@
             // newgame
             // 
             this.newgame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(82)))));
+            this.newgame.Cursor = System.Windows.Forms.Cursors.Hand;
             this.newgame.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.newgame.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
             this.newgame.ForeColor = System.Drawing.Color.White;
-            this.newgame.Location = new System.Drawing.Point(708, 288);
+            this.newgame.Location = new System.Drawing.Point(769, 271);
             this.newgame.Name = "newgame";
             this.newgame.Size = new System.Drawing.Size(250, 80);
             this.newgame.TabIndex = 0;
@@ -65,12 +67,15 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(638, 75);
+            this.label1.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(754, 76);
+            this.label1.Margin = new System.Windows.Forms.Padding(5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(323, 70);
+            this.label1.Padding = new System.Windows.Forms.Padding(10);
+            this.label1.Size = new System.Drawing.Size(283, 78);
             this.label1.TabIndex = 2;
             this.label1.Text = "Welcome!";
             // 
@@ -80,11 +85,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1130, 640);
+            this.ClientSize = new System.Drawing.Size(1182, 753);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.results);
             this.Controls.Add(this.newgame);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(1200, 800);
             this.Name = "Welcome_Form";
             this.Text = "Welcome";
             this.ResumeLayout(false);

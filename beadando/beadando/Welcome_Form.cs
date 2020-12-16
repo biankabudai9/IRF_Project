@@ -24,7 +24,7 @@ namespace beadando
         }
 
 
-        //Eddigi játékosok betöltése az adatbázisból
+        //Eddigi játékosok betöltése az adatbázisból a listába
         private void LoadSavedPlayers()
         {
             foreach (var item in context.Players)
@@ -39,7 +39,7 @@ namespace beadando
         }
 
 
-        //Új játék form
+        //Új játék form megnyitása
         private void newgame_Click(object sender, EventArgs e)
         {
             Form NewGame = new NewGame_Form();
@@ -48,7 +48,7 @@ namespace beadando
         }
 
 
-        //Eredmények form
+        //Eredmények form megnyitása
         private void results_Click(object sender, EventArgs e)
         {
             Form Resultsform = new Results_Form(savedPlayers);
