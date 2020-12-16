@@ -65,22 +65,22 @@ namespace beadando
         private void getFirstMap()
         {
             rnd = new Random();
-            firstMap = new Bitmap("./startMaps/startmap" + rnd.Next(1, 4) + ".bmp");
+            firstMap = new Bitmap("./startMaps/startmap" + rnd.Next(1, 4) + ".bmp"); //véletlenszerűen kiválasztjuk, melyik fájlt töltsük be
             firstcheck = new List<string>();
             for (int i = 1; i <= 299; i++)
             {
                 for (int j = 1; j <= 299; j++)
                 {
-                    if (firstMap.GetPixel(i, j) == Color.FromArgb(255, 0, 0, 0))
+                    if (firstMap.GetPixel(i, j) == Color.FromArgb(255, 0, 0, 0)) 
                     {
                         firstcheck.Add(i + ":" + j);
-                        Console.WriteLine(firstcheck.Last());
+                        Console.WriteLine(firstcheck.Last()); //kilistázzuk az összes pixelt, aminek be van színezve 
                     }
                 }
             }
         }
 
-        private void getThePlayers()
+        private void getThePlayers() //Játékosok hozzáadása
         {
 
             counterOfPlayer1 = new List<int>();
@@ -94,7 +94,7 @@ namespace beadando
 
 
         }
-        private void getFormElements()
+        private void getFormElements() //Létrejön a rajzoló felület
         {
             panel1 = new Panel();
             panel1.Width = 300;
@@ -110,13 +110,13 @@ namespace beadando
             panel1.MouseUp += Panel1_MouseUp;
             panel1.MouseMove += Panel1_MouseMove;
 
-            dbmp = new DirectBitmap(panel1.Width, panel1.Height);
+            dbmp = new DirectBitmap(panel1.Width, panel1.Height); //DirectBitmap osztályból létrehozunk egy példányt, ami akkora, mint a panel1
             g = panel1.CreateGraphics();
             pen = new Pen(actualColor, 5);
             this.Controls.Add(panel1);
         }
 
-        private void getStarted()
+        private void getStarted() //Check és Checkother azokat a pontokat tartalmazza, amiket már beszíneztek
         {
             check = new List<string>();
             checkother = new List<string>();
@@ -132,7 +132,7 @@ namespace beadando
             latest2.Text = counterOfPlayer2.Last().ToString();
         }
 
-        private bool checkPosition(int x, int y)
+        private bool checkPosition(int x, int y) //Ellenőrzi, hogy a pályán belül van-e még a játékos vonala
         {
 
             if (x > 299 || x < 0 || y > 299 || y < 0)
@@ -143,7 +143,7 @@ namespace beadando
 
         }
 
-        private void Panel1_MouseMove(object sender, MouseEventArgs e)
+        private void Panel1_MouseMove(object sender, MouseEventArgs e) //Ha mozog az egér, akkor beszínezzük a játékos színével az adott pixeleket
         {
             if (itCanDraw && isDrawing && x != -1 && y != -1)
             {
@@ -154,9 +154,9 @@ namespace beadando
 
                 checkPosition(x, y);
 
-                if (checkPosition(x, y))
+                if (checkPosition(x, y)) //Itt ellenőrizzük, hogy a felületen belül van-e a vonal 
                 {
-                    try
+                    try //Ha kirajzoltunk a felületről, akkor sem áll meg a program
                     {
                         dbmp.SetPixel(x - 1, y - 1, actualColor);
                     }
@@ -219,12 +219,12 @@ namespace beadando
             }
         }
 
-        private void Panel1_MouseUp(object sender, MouseEventArgs e)
+        private void Panel1_MouseUp(object sender, MouseEventArgs e) //ha felemeljük az egeret, akkor vége a körnek
         {
             endOfRound();
         }
 
-        private void endOfRound()
+        private void endOfRound() //Összehasonlítjuk a pixeleket, a végkimenetele lehet firstLost, end, lost, vagy hozzáadjuk az új pixelt
         {
             if (itCanDraw)
             {
@@ -287,7 +287,7 @@ namespace beadando
                     }
                 }
 
-                if (lost || end || firstLost)
+                if (lost || end || firstLost) //A végkimenetelnek megfelelő üzenetet írunk ki a végén
                 {
                     if (firstLost && currentPlayer == player1)
                     {
@@ -342,7 +342,7 @@ namespace beadando
         }
 
 
-        private void itIsTheFinalCount()
+        private void itIsTheFinalCount() //A játék végén kiírjuk a pontokat
         {
             if (counterOfPlayer1.Sum() == counterOfPlayer2.Sum())
             {
@@ -360,7 +360,7 @@ namespace beadando
             }
         }
 
-        private void pointToPlayer1()
+        private void pointToPlayer1() //Pontok hozzáadása
         {
 
             Player p = (from c in context.Players
@@ -384,7 +384,7 @@ namespace beadando
 
 
 
-        private void changeplayer()
+        private void changeplayer() //Játékos váltás
         {
 
             if (currentPlayer == player1)
