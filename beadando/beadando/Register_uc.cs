@@ -165,6 +165,36 @@ namespace beadando
         {
             MessageBox.Show("Add a password that contains both letters and numbers and is at least 8 characters. Confirm it in the next field.");
         }
+
+        private void addplayer_Click(object sender, EventArgs e)
+        {
+            Player newplayer = new Player();
+            if (newname.Text != "" && newage.Text != "" && pw.Text != "" && pwagain.Text != "")
+            {
+                newplayer.name = newname.Text;
+                newplayer.age = Convert.ToInt32(newage.Text);
+                newplayer.password = pw.Text;
+                newplayer.score = 0;
+
+                context.Players.Add(newplayer);
+
+                try
+                {                   
+                    context.SaveChanges();
+                    MessageBox.Show("Registration was successful!");
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Registration was unsuccessful :(");
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("None of the fields can stay empty");
+            }
+        }
     }
 
         

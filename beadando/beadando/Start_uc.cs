@@ -152,11 +152,23 @@ namespace beadando
 
             if (incorrect_message.Visible == false)           
             {
+                var first = (from c in context.Players
+                             where c.name == name1.Text
+                             select c).FirstOrDefault();
+
+                SavedPlayer firstplayer = new SavedPlayer();
+                firstplayer.name = first.name;
+
+                var second = (from c in context.Players
+                              where c.name == name2.Text
+                              select c).FirstOrDefault();
+
+                SavedPlayer secondplayer = new SavedPlayer();
+                secondplayer.name = second.name;
+
                 
-
-                Form NewGame_Form = new NewGame_Form();
-                NewGame_Form.Show();
-
+                Form Game_Form = new Game_Form(firstplayer, secondplayer, Color.FromArgb(255, 0, 0, 0), Color.FromArgb(140, 140, 20, 10));
+                Game_Form.Show();
             }
             else
             {

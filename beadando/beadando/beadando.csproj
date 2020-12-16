@@ -74,6 +74,13 @@
     <Compile Include="ChosenColor.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="DirectBitmap.cs" />
+    <Compile Include="Game_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Game_Form.Designer.cs">
+      <DependentUpon>Game_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Register_uc.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -92,12 +99,6 @@
     </Compile>
     <Compile Include="Welcome_Form.Designer.cs">
       <DependentUpon>Welcome_Form.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Game_form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Game_form.Designer.cs">
-      <DependentUpon>Game_form.cs</DependentUpon>
     </Compile>
     <Compile Include="Hint_button.cs">
       <SubType>Component</SubType>
@@ -137,6 +138,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Game_Form.resx">
+      <DependentUpon>Game_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NewGame_Form.resx">
       <DependentUpon>NewGame_Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,9 +152,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Welcome_Form.resx">
       <DependentUpon>Welcome_Form.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Game_form.resx">
-      <DependentUpon>Game_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Start_uc.resx">
       <DependentUpon>Start_uc.cs</DependentUpon>

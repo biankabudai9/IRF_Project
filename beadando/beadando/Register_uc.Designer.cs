@@ -61,6 +61,7 @@
             this.addplayer.TabIndex = 9;
             this.addplayer.Text = "Go";
             this.addplayer.UseVisualStyleBackColor = true;
+            this.addplayer.Click += new System.EventHandler(this.addplayer_Click);
             // 
             // wrongname
             // 
