@@ -20,12 +20,28 @@ namespace beadando
         {
             InitializeComponent();
 
-            colors();
+            combobox_colors();
+
             Go_IsEnabled();
 
         }
 
-        void colors()
+
+        // Regisztrációs Form betöltése
+        private void Register_Click(object sender, EventArgs e)
+        {
+
+
+            Controls.Clear();
+            Register_uc registeruc = new Register_uc();
+            Controls.Add(registeruc);
+            registeruc.Dock = DockStyle.Fill;
+
+
+        }
+
+        //ChosenColor táblából a színek betöltése comboboxokba
+        void combobox_colors()
         {
             var co = from c in context.ChosenColors
                      select c;
@@ -40,33 +56,25 @@ namespace beadando
 
         }
 
+        // Engedélyezzük a Go Gombot, ha minden adat ki van töltve
         private void Go_IsEnabled()
         {
-            //if (name1.Text != "" && name2.Text != "" && pw1.Text != "" && pw2.Text != "" && color1.Text != "" && color2.Text != "" && incorrect_message.Visible == false)
-            //{
+            if (name1.Text != "" && name2.Text != "" && pw1.Text != "" && pw2.Text != "" && color1.Text != "" && color2.Text != "" && incorrect_message.Visible == false)
+            {
 
                 Go.Enabled = true;
 
-            //}
-            //else
-            //{
-            //    Go.Enabled = false;
+            }
+            else
+            {
+                Go.Enabled = false;
 
-            //}
+            }
         }
 
-        private void Register_Click(object sender, EventArgs e)
-        {
 
 
-            Controls.Clear();
-            Register_uc registeruc = new Register_uc();
-            Controls.Add(registeruc);
-            registeruc.Dock = DockStyle.Fill;
-
-            
-        }
-
+        // Ha változtatunk a beírt adatokon, újra meghívja a Go_IsEnabled függvényt
         private void name1_TextChanged(object sender, EventArgs e)
         {
             Go_IsEnabled();
@@ -92,6 +100,8 @@ namespace beadando
            
         }
 
+        //A beírt adatok helyesek-e, szerepelnek-e az adatbázisban
+        //Ha nem szerepel ilyen adat, akkor hibaüzenet jelenik meg
         private void IsItCorrect()
         {
             var u = (from a in context.Players
@@ -145,6 +155,9 @@ namespace beadando
             }
 
         }
+
+        // A Go gomb lenyomásakor megnézzük, kapunk-e hibaüzenetet az IsItCorrect függvényre
+        // ha nem, akkor betöltjük a játékosok adatait a játékhoz
         private void Go_Click(object sender, EventArgs e)
         {
 
@@ -172,10 +185,12 @@ namespace beadando
             }
             else
             {
-                Go.Enabled = false;
+                MessageBox.Show("Some details are incorrect");
             }
 
 
         }
+
+
     }
 }

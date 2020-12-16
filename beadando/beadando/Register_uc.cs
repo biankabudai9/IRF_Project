@@ -20,6 +20,7 @@ namespace beadando
         }
 
 
+        //Ha mégsem akar új játékos regisztrálni, visszaállítjuk az előző Start usercontrolt
         private void cancel_Click(object sender, EventArgs e)
         {
             Controls.Clear();
@@ -29,6 +30,9 @@ namespace beadando
 
         }
 
+        //Regex
+        //ha match, akkor engedélyezve lesz a játékos hozzáadása a Go gombbal
+        //ha nem match, akkor nincs engedélyezve a gomb
         private void newname_Validating(object sender, CancelEventArgs e)
         {
             var u = (from x in context.Players
@@ -50,6 +54,7 @@ namespace beadando
 
             }
 
+            //Ha már létezik ilyen felhasználónév, akkor megjelenik a hibaüzenet a labelben
             if (u != null)
             {
                 wrongname.Visible = true;
@@ -84,7 +89,7 @@ namespace beadando
                 newage.BackColor = Color.Salmon;
                 e.Cancel = true;
                 addplayer.Enabled = false;
-                wrongage.Visible = true;
+                wrongage.Visible = true; //Hibaüzenet jeleik meg a textbox mellett
             }
         }
 
@@ -101,21 +106,25 @@ namespace beadando
             {
                 pw.BackColor = Color.FromArgb(255, 216, 242, 246);
                 addplayer.Enabled = true;
-                wrongpw.Visible = false;
+                wrongpw.Visible = false; 
             }
             else
             {
                 pw.BackColor = Color.Salmon;
                 e.Cancel = true;
                 addplayer.Enabled = false;
-                wrongpw.Visible = true;
+                wrongpw.Visible = true; //Hibaüzenet jelenik meg a textbox mellett
             }
         }
 
         private void pw_TextChanged(object sender, EventArgs e)
         {
             this.Validate();
-            pwagain.Enabled = true;
+
+            //Ha már beírtunk egyféle jelszót, engedélyezve lesz, hogy írjunk a megerősítés textboxába
+            if (pw.Text != "")
+            { pwagain.Enabled = true; } 
+            
         }
 
         private void pwagain_Validating(object sender, CancelEventArgs e)
@@ -125,7 +134,7 @@ namespace beadando
             {
                 pwagain.Enabled = true;
                 string r = pw.Text;
-                if (r == pwagain.Text)
+                if (r == pwagain.Text) //Egyezzenek a beírt jelszavak
                 {
                     
                     pwagain.BackColor = Color.FromArgb(255, 216, 242, 246);
@@ -151,6 +160,8 @@ namespace beadando
             this.Validate();
         }
 
+
+        //Hint buttonokra kattintva üzenetek jelennek meg
         private void hint_button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Choose a unique username that is not used by anyone yet.");
@@ -166,9 +177,14 @@ namespace beadando
             MessageBox.Show("Add a password that contains both letters and numbers and is at least 8 characters. Confirm it in the next field.");
         }
 
+
+        //Játékos hozzáadása, ha minden adat ki lett töltve
+        
         private void addplayer_Click(object sender, EventArgs e)
         {
+
             Player newplayer = new Player();
+
             if (newname.Text != "" && newage.Text != "" && pw.Text != "" && pwagain.Text != "")
             {
                 newplayer.name = newname.Text;
@@ -192,7 +208,7 @@ namespace beadando
             }
             else
             {
-                MessageBox.Show("None of the fields can stay empty");
+                MessageBox.Show("None of the fields can stay empty"); //ha nem lett minden adat kitöltve, akkor hibaüzenet
             }
         }
     }

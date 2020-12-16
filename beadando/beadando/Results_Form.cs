@@ -16,7 +16,7 @@ namespace beadando
     public partial class Results_Form : Form
     {
 
-        databaseEntities context = new databaseEntities();
+        
         List<SavedPlayer> _savedPlayers = new List<SavedPlayer>();
 
         public Results_Form(List<SavedPlayer> savedPlayers)
@@ -25,14 +25,14 @@ namespace beadando
             _savedPlayers = savedPlayers;
             chartfill(savedPlayers);
         }
-
+         //Diagram feltöltése adatokkal
         private void chartfill(List<SavedPlayer> savedPlayers)
         {
             var r = from y in savedPlayers
                     select new { y.name, y.score };
             var r2 = (from z in r
                       orderby z.score descending
-                      select z).Take(5);
+                      select z).Take(5); //Top 5 játékos kiválasztása
 
             var results = from x in r2
                           select new diagram
@@ -41,7 +41,7 @@ namespace beadando
                               score = x.score
                           };
 
-            diagramBindingSource.DataSource = results.ToList();
+            diagramBindingSource.DataSource = results.ToList(); 
 
             piechart.DataBind();
 
@@ -49,6 +49,7 @@ namespace beadando
 
         }
 
+        // Kiírás CSV-be 
         private void download_Click(object sender, EventArgs e)
         {
             var details = from x in _savedPlayers
@@ -60,11 +61,11 @@ namespace beadando
             if (save.ShowDialog() != DialogResult.OK) return;
             using (StreamWriter sw = new StreamWriter(save.FileName, false, Encoding.UTF8))
             {
-                sw.Write("name");
+                sw.Write("Name");
                 sw.Write(";");
-                sw.Write("score");
+                sw.Write("Score");
                 sw.Write(";");
-                sw.Write("age");
+                sw.Write("AgeGroup");
                 sw.Write(";");
                 sw.WriteLine();
                 foreach (var d in details)
@@ -81,6 +82,7 @@ namespace beadando
         }
     }
 
+    //Diagram osztály létrehozása
     public class diagram
     {
         public string name { get; set; }

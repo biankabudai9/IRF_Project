@@ -13,15 +13,18 @@ namespace beadando
     public partial class Welcome_Form : Form
     {
         databaseEntities context = new databaseEntities();
-        List<SavedPlayer> savedPlayers = new List<SavedPlayer>();
+        List<SavedPlayer> savedPlayers = new List<SavedPlayer>(); //Az eddigi játékosok listája
 
         public Welcome_Form()
         {
             InitializeComponent();
-            LoadSavedPlayers();
+
+            LoadSavedPlayers(); 
 
         }
 
+
+        //Eddigi játékosok betöltése az adatbázisból
         private void LoadSavedPlayers()
         {
             foreach (var item in context.Players)
@@ -35,6 +38,8 @@ namespace beadando
             }
         }
 
+
+        //Új játék form
         private void newgame_Click(object sender, EventArgs e)
         {
             Form NewGame = new NewGame_Form();
@@ -42,6 +47,8 @@ namespace beadando
 
         }
 
+
+        //Eredmények form
         private void results_Click(object sender, EventArgs e)
         {
             Form Resultsform = new Results_Form(savedPlayers);

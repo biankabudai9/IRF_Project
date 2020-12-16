@@ -66,6 +66,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(831, 504);
             this.label2.Name = "label2";
@@ -76,8 +77,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(831, 472);
+            this.label1.Location = new System.Drawing.Point(831, 453);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 23);
             this.label1.TabIndex = 24;
@@ -86,6 +88,7 @@
             // name2
             // 
             this.name2.AutoSize = true;
+            this.name2.BackColor = System.Drawing.Color.Transparent;
             this.name2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.name2.Location = new System.Drawing.Point(64, 235);
             this.name2.Name = "name2";
@@ -96,6 +99,7 @@
             // name1
             // 
             this.name1.AutoSize = true;
+            this.name1.BackColor = System.Drawing.Color.Transparent;
             this.name1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.name1.Location = new System.Drawing.Point(64, 176);
             this.name1.Name = "name1";
@@ -106,6 +110,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(234, 115);
             this.label3.Name = "label3";
@@ -116,6 +121,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(64, 115);
             this.label4.Name = "label4";
@@ -126,6 +132,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(391, 115);
             this.label5.Name = "label5";
@@ -136,6 +143,7 @@
             // score2
             // 
             this.score2.AutoSize = true;
+            this.score2.BackColor = System.Drawing.Color.Transparent;
             this.score2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.score2.Location = new System.Drawing.Point(229, 235);
             this.score2.Name = "score2";
@@ -146,6 +154,7 @@
             // score1
             // 
             this.score1.AutoSize = true;
+            this.score1.BackColor = System.Drawing.Color.Transparent;
             this.score1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.score1.Location = new System.Drawing.Point(229, 176);
             this.score1.Name = "score1";
@@ -156,6 +165,7 @@
             // latest2
             // 
             this.latest2.AutoSize = true;
+            this.latest2.BackColor = System.Drawing.Color.Transparent;
             this.latest2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.latest2.Location = new System.Drawing.Point(409, 235);
             this.latest2.Name = "latest2";
@@ -166,6 +176,7 @@
             // latest1
             // 
             this.latest1.AutoSize = true;
+            this.latest1.BackColor = System.Drawing.Color.Transparent;
             this.latest1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.latest1.Location = new System.Drawing.Point(409, 176);
             this.latest1.Name = "latest1";
@@ -178,6 +189,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1302, 553);
             this.Controls.Add(this.latest2);
             this.Controls.Add(this.latest1);

@@ -34,9 +34,9 @@
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Results_Form));
             this.piechart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.diagramBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.download = new beadando.Mybutton();
-            this.diagramBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.piechart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diagramBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -81,6 +81,10 @@
             this.piechart.TabIndex = 1;
             this.piechart.Text = "chart1";
             // 
+            // diagramBindingSource
+            // 
+            this.diagramBindingSource.DataSource = typeof(beadando.diagram);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -107,14 +111,11 @@
             this.download.UseVisualStyleBackColor = false;
             this.download.Click += new System.EventHandler(this.download_Click);
             // 
-            // diagramBindingSource
-            // 
-            this.diagramBindingSource.DataSource = typeof(beadando.diagram);
-            // 
             // Results_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(932, 603);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.download);

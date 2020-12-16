@@ -8,5 +8,5 @@ Kötelező tételek:
 4. Graphics osztály használata
 
 Plusz funkciók:
-5. Adatbázisba írás: új játékosok regisztrációja a játék előtt
+5. Adatbázisba írás: új játékosok is regisztrálhatnak a játék előtt
 6. Diagram: Top 5 játékos megjelenítése tortadiagramon

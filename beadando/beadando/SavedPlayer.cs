@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace beadando
 {
+    //SavedPlayer osztály létrehozása
     public class SavedPlayer
     {
         public int player_id { get; set; }
@@ -13,6 +14,8 @@ namespace beadando
 
         private int _age;
 
+
+        //AgeGroup meghatározása setter ágon
         public int age
         {
             get { return _age; }

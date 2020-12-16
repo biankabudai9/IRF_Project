@@ -8,6 +8,7 @@ using System.Windows.Forms;
 
 namespace beadando
 {
+    //Saját gomb osztály
     public class Mybutton : Button
     {
         public Mybutton()
