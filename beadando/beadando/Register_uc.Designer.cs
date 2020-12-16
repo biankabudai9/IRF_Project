@@ -94,7 +94,7 @@
             this.wrongpw.BackColor = System.Drawing.Color.Transparent;
             this.wrongpw.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.wrongpw.ForeColor = System.Drawing.Color.Red;
-            this.wrongpw.Location = new System.Drawing.Point(566, 300);
+            this.wrongpw.Location = new System.Drawing.Point(566, 328);
             this.wrongpw.Name = "wrongpw";
             this.wrongpw.Size = new System.Drawing.Size(264, 92);
             this.wrongpw.TabIndex = 12;
@@ -104,6 +104,7 @@
             // cancel
             // 
             this.cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(82)))));
+            this.cancel.CausesValidation = false;
             this.cancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cancel.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);

@@ -19,6 +19,7 @@ namespace beadando
             InitializeComponent();
         }
 
+
         private void cancel_Click(object sender, EventArgs e)
         {
             Controls.Clear();
@@ -114,25 +115,35 @@ namespace beadando
         private void pw_TextChanged(object sender, EventArgs e)
         {
             this.Validate();
+            pwagain.Enabled = true;
         }
 
         private void pwagain_Validating(object sender, CancelEventArgs e)
         {
-            string r = pw.Text;
-            if (r == pwagain.Text)
+
+            if (pw.Text != "")
             {
-                pwagain.BackColor = Color.FromArgb(255, 216, 242, 246);
-                addplayer.Enabled = true;
-                wrongpw.Visible = false;
+                pwagain.Enabled = true;
+                string r = pw.Text;
+                if (r == pwagain.Text)
+                {
+                    
+                    pwagain.BackColor = Color.FromArgb(255, 216, 242, 246);
+                    addplayer.Enabled = true;
+                    wrongpw.Visible = false;
+                }
+                else
+                {
+                    pwagain.BackColor = Color.Salmon;
+                    e.Cancel = true;
+                    addplayer.Enabled = false;
+                    wrongpw.Visible = true;
+                }
             }
             else
             {
-                pwagain.BackColor = Color.Salmon;
-                e.Cancel = true;
-                addplayer.Enabled = false;
-                wrongpw.Visible = true;
+                pwagain.Enabled = false;
             }
-
         }
 
         private void pwagain_TextChanged(object sender, EventArgs e)

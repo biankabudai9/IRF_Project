@@ -45,7 +45,6 @@
             this.name2 = new System.Windows.Forms.TextBox();
             this.pw2 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.cancel = new beadando.Mybutton();
             this.Go = new beadando.Mybutton();
             this.SuspendLayout();
             // 
@@ -56,7 +55,7 @@
             this.Register.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Register.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
             this.Register.ForeColor = System.Drawing.Color.Black;
-            this.Register.Location = new System.Drawing.Point(633, 529);
+            this.Register.Location = new System.Drawing.Point(432, 529);
             this.Register.Name = "Register";
             this.Register.Size = new System.Drawing.Size(200, 54);
             this.Register.TabIndex = 12;
@@ -247,25 +246,11 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(625, 478);
+            this.label9.Location = new System.Drawing.Point(192, 540);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(217, 34);
             this.label9.TabIndex = 32;
             this.label9.Text = "First time here?";
-            // 
-            // cancel
-            // 
-            this.cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(82)))));
-            this.cancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cancel.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
-            this.cancel.ForeColor = System.Drawing.Color.White;
-            this.cancel.Location = new System.Drawing.Point(58, 529);
-            this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(177, 54);
-            this.cancel.TabIndex = 18;
-            this.cancel.Text = "Cancel";
-            this.cancel.UseVisualStyleBackColor = false;
             // 
             // Go
             // 
@@ -300,7 +285,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cancel);
             this.Controls.Add(this.incorrect_message);
             this.Controls.Add(this.color2);
             this.Controls.Add(this.color1);
@@ -323,7 +307,6 @@
         private System.Windows.Forms.ComboBox color1;
         private System.Windows.Forms.ComboBox color2;
         private System.Windows.Forms.Label incorrect_message;
-        private Mybutton cancel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
