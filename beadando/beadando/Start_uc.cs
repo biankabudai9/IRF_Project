@@ -59,7 +59,7 @@ namespace beadando
         // Engedélyezzük a Go Gombot, ha minden adat ki van töltve
         private void Go_IsEnabled()
         {
-            if (name1.Text != "" && name2.Text != "" && pw1.Text != "" && pw2.Text != "" && color1.Text != "" && color2.Text != "" && color1.Text != color2.Text)
+            if (name1.Text != "" && name2.Text != "" && pw1.Text != "" && pw2.Text != "" && color1.Text != "" && color2.Text != "" && color1.Text != color2.Text && incorrect_message.Visible == false)
             {
 
                 Go.Enabled = true;
@@ -156,15 +156,8 @@ namespace beadando
             }
 
             //Egyforma színt nem választhatnak
-            if (color1.SelectedItem == color2.SelectedItem)
-            {
-                MessageBox.Show("Do not choose the same color");
-                incorrect_message.Visible = true;
-            }
-            else
-            {
-                incorrect_message.Visible = false;
-            }
+            
+           
         }
 
         // A Go gomb lenyomásakor megnézzük, kapunk-e hibaüzenetet az IsItCorrect függvényre
@@ -221,11 +214,23 @@ namespace beadando
         private void color1_SelectedIndexChanged(object sender, EventArgs e)
         {
             Go_IsEnabled();
+            if (color1.SelectedItem == color2.SelectedItem)
+            {
+                MessageBox.Show("Do not choose the same color");
+
+            }
         }
 
         private void color2_SelectedIndexChanged(object sender, EventArgs e)
         {
             Go_IsEnabled();
+            if (color1.SelectedItem == color2.SelectedItem)
+            {
+                MessageBox.Show("Do not choose the same color");
+
+            }
         }
+
+        
     }
 }

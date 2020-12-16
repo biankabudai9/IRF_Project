@@ -29,15 +29,14 @@ namespace beadando
         bool itCanDraw = false;
         bool isFirstGame = true;
         Pen pen;
-        Panel panel2;
         int counter;
 
         List<int> counterOfPlayer1;
         List<int> counterOfPlayer2;
 
-        DirectBitmap teszt;
+        DirectBitmap dbmp;
         Bitmap firstMap;
-
+        
         List<string> check;
         List<string> checkother;
         List<string> firstcheck;
@@ -103,7 +102,7 @@ namespace beadando
             panel1.Top = 30;
             panel1.Left = (this.ClientSize.Width / 2) - 150;
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.BackColor = Color.Red;
+            panel1.BackColor = Color.White;
 
             panel1.MouseEnter += Panel1_MouseEnter;
             panel1.MouseLeave += Panel1_MouseLeave;
@@ -111,7 +110,7 @@ namespace beadando
             panel1.MouseUp += Panel1_MouseUp;
             panel1.MouseMove += Panel1_MouseMove;
 
-            teszt = new DirectBitmap(panel1.Width, panel1.Height);
+            dbmp = new DirectBitmap(panel1.Width, panel1.Height);
             g = panel1.CreateGraphics();
             pen = new Pen(actualColor, 5);
             this.Controls.Add(panel1);
@@ -159,57 +158,55 @@ namespace beadando
                 {
                     try
                     {
-                        teszt.SetPixel(x - 1, y - 1, actualColor);
+                        dbmp.SetPixel(x - 1, y - 1, actualColor);
                     }
                     catch (Exception)
                     { }
                     try
                     {
-                        teszt.SetPixel(x - 1, y, actualColor);
+                        dbmp.SetPixel(x - 1, y, actualColor);
                     }
                     catch (Exception)
                     { }
                     try
                     {
-                        teszt.SetPixel(x - 1, y + 1, actualColor);
+                        dbmp.SetPixel(x - 1, y + 1, actualColor);
                     }
                     catch (Exception)
                     { }
                     try
                     {
-                        teszt.SetPixel(x, y - 1, actualColor);
+                        dbmp.SetPixel(x, y - 1, actualColor);
                     }
                     catch (Exception)
                     { }
                     try
                     {
-                        teszt.SetPixel(x, y, actualColor);
-                    }
-                    catch (Exception)
-                    {
-                        //endOfRound();
-                    }
-                    try
-                    {
-                        teszt.SetPixel(x, y + 1, actualColor);
+                        dbmp.SetPixel(x, y, actualColor);
                     }
                     catch (Exception)
                     { }
                     try
                     {
-                        teszt.SetPixel(x + 1, y - 1, actualColor);
+                        dbmp.SetPixel(x, y + 1, actualColor);
                     }
                     catch (Exception)
                     { }
                     try
                     {
-                        teszt.SetPixel(x + 1, y, actualColor);
+                        dbmp.SetPixel(x + 1, y - 1, actualColor);
                     }
                     catch (Exception)
                     { }
                     try
                     {
-                        teszt.SetPixel(x + 1, y + 1, actualColor);
+                        dbmp.SetPixel(x + 1, y, actualColor);
+                    }
+                    catch (Exception)
+                    { }
+                    try
+                    {
+                        dbmp.SetPixel(x + 1, y + 1, actualColor);
                     }
                     catch (Exception)
                     { }
@@ -238,12 +235,12 @@ namespace beadando
                 y = -1;
 
                 
-                panel2.BackgroundImage = teszt.Bitmap;
+                
                 for (int i = 1; i <= panel1.Width-1; i++)
                 {
                     for (int j = 1; j <= panel1.Height-1; j++)
                     {
-                        if (teszt.GetPixel(i, j) == colorOfPlayer1)
+                        if (dbmp.GetPixel(i, j) == colorOfPlayer1)
                         {
                             if (isFirstGame && firstcheck.Contains(i + ":" + j))
                             {
@@ -251,7 +248,7 @@ namespace beadando
                             }
                             if (checkother.Contains(i + ":" + j))
                             {
-                                MessageBox.Show("Belementél a másikba");
+                                
                                 end = true;
                             }
                             if (check.Contains(i + ":" + j))
@@ -265,7 +262,7 @@ namespace beadando
 
                             counter++;
                         }
-                        if (teszt.GetPixel(i, j) == colorOfPlayer2)
+                        if (dbmp.GetPixel(i, j) == colorOfPlayer2)
                         {
 
                             if (isFirstGame && firstcheck.Contains(i + ":" + j))
@@ -418,7 +415,7 @@ namespace beadando
             isDrawing = true;
             x = e.X;
             y = e.Y;
-            teszt = new DirectBitmap(panel1.Width, panel1.Height);
+            dbmp = new DirectBitmap(panel1.Width, panel1.Height);
         }
 
         private void Panel1_MouseLeave(object sender, EventArgs e)

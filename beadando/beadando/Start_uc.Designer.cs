@@ -94,11 +94,11 @@
             this.incorrect_message.BackColor = System.Drawing.Color.Transparent;
             this.incorrect_message.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
             this.incorrect_message.ForeColor = System.Drawing.Color.Red;
-            this.incorrect_message.Location = new System.Drawing.Point(253, 327);
+            this.incorrect_message.Location = new System.Drawing.Point(332, 331);
             this.incorrect_message.Name = "incorrect_message";
-            this.incorrect_message.Size = new System.Drawing.Size(395, 28);
+            this.incorrect_message.Size = new System.Drawing.Size(185, 28);
             this.incorrect_message.TabIndex = 17;
-            this.incorrect_message.Text = "Incorrect username or password!";
+            this.incorrect_message.Text = "Incorrect data!";
             this.incorrect_message.Visible = false;
             // 
             // label2

@@ -213,9 +213,15 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
-    <Content Include="startMaps\startmap1.bmp" />
-    <Content Include="startMaps\startmap2.bmp" />
-    <Content Include="startMaps\startmap3.bmp" />
+    <Content Include="startMaps\startmap1.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="startMaps\startmap2.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="startMaps\startmap3.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
